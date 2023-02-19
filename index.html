@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(98, 98, 98)
+            ;
+        }
+
+        .phone
+        {
+            border: 10px;
+            border-color: black;
+            border-radius: 15px;
+            height: 700px;
+            width: 350px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            margin: 15%;
+
+        }
+        .bg
+        {
+            background-image: url(bg.jpg);
+            
+            height: 560px;
+            width: 330px;
+            margin: 10px;
+            
+        }
+
+        .resecer
+        {
+            height: 30px;
+            width: auto;
+            background-color: rgb(40, 56,42);
+        }
+
+        div>h2{
+            
+            color: beige;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .btn
+        {
+            background-color: rgb(91, 255, 10);
+            border-radius: 50%;
+            width:50px;
+            height: 50px;
+            color: antiquewhite;
+            font-size: 20px;
+        }
+
+        div>label
+        {
+            color: aqua;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            width: 70px;
+            display: inline-block;
+            font-size:20px;
+            text-align: left;
+        
+        
+        }
+
+        div>input
+
+        {
+            background-color: rgb(122, 124, 124);
+            height: 20px;
+            border-radius: 15px;
+            border-color: transparent;
+            color: brown;
+            padding: 8px;
+        }
+
+        div>input::-webkit-input-placeholder
+        {
+            color: aqua;
+            text-decoration:wavy;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+
+       
+    </style>
+
+    <script>
+
+        function otp1()
+        {
+            alert('Server is eneble to send OTP in this coundition your otp is 9999 ');
+        }
+
+        function otp2()
+        {
+            var btn = document.getElementById("idotp").value ;
+           if(btn != 9999)
+           {
+            alert("Wrong otp");
+           }
+
+    }
+    </script>
+</head>
+<body>
+    <div class="phone">
+         <br><br>
+         <hr>
+         <div class="bg">
+            <div class="resecer">
+              <div class="backarro">
+                <h2>Login</h2>
+              </div>  
+              <form>
+              <div class="main">
+                <label>Name:-</label>
+                <input type="text" name="name" placeholder="Name" required><br>
+                <label>Password:-</label>
+                <input type="password" name="pass" placeholder="Password" required>
+                <label>Email:-</label>
+                <input type="email" name="email" placeholder="email@domin.com" required><br>
+                <label>Phone:-</label>
+                <input type="tel" name="phone" placeholder="+91 99999 99999" maxlength="10" required><br>
+                
+                <button name="otp" onclick="otp1()">Send OTP</button><br>
+
+                <label>OTP:-</label>
+                <input type="tel"  id="idotp" placeholder="0000" maxlength="4" required>
+
+              </div>
+
+             
+            </div>
+         </div>
+         <hr>
+         <div>
+        
+            <button class="btn" onclick="otp2()">
+            Go
+            </button>
+          </div>
+        </form>
+    </div>
+</body>
+</html>
